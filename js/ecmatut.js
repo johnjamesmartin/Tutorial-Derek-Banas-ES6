@@ -19,3 +19,22 @@ if (true) {
 }
 
 document.write('y = ' + y + '<br/>');
+
+
+
+/* 2. const
+ ***************************************************************************************/
+
+// const stands for "constant" — it's a variable that you cannot overwrite once it's defined:
+
+const PI = 3.14159;
+
+// would throw an error =>    PI = 2.13;
+
+if (true) {
+    const PI = 2.13;
+    document.write('PI = ' + PI + '<br />');
+    // ^ does not throw an error, because it has its own scope
+}
+
+document.write('PI = ' + PI + '<br />');
