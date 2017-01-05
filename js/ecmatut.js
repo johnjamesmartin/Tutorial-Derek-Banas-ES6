@@ -129,3 +129,23 @@ function getSum(num1 = 1, num2 = 2) {
 }
 
 getSum(3);
+
+
+
+/* 8. Rest parameters
+ ***************************************************************************************/
+
+function getSumMore(...vals) {
+    //               ^ rest param
+    let sum = 0;
+    for (let i = 0, len = vals.length; i < len; i++) {
+        sum += vals[i];
+    }
+    document.write(`The sum is ${sum}<br/>`);
+}
+
+getSumMore(1, 2, 3, 4);
+
+let vals = [1, 2, 3, 4, 5];
+
+getSumMore(...vals);
