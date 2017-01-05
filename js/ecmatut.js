@@ -38,3 +38,16 @@ if (true) {
 }
 
 document.write('PI = ' + PI + '<br />');
+
+
+
+/* 3. Data types
+ ***************************************************************************************/
+
+document.write(typeof true + '<br/>');
+document.write(typeof 3.14 + '<br/>');
+document.write(typeof 'string' + '<br/>');
+document.write(typeof Symbol() + '<br/>');
+document.write(typeof { a: 1 } + '<br/>');
+document.write(typeof [1, 2, 3] + '<br/>');
+document.write(typeof undefined + '<br/>');
