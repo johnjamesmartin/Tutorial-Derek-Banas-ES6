@@ -149,3 +149,18 @@ getSumMore(1, 2, 3, 4);
 let vals = [1, 2, 3, 4, 5];
 
 getSumMore(...vals);
+
+
+
+/* 9. Arrow functions
+ ***************************************************************************************/
+
+let difference = (num1, num2) => num1 - num2;
+document.write(`5 - 10 = ${difference(5, 10)}<br/>`);
+
+let mult = (num1, num2) => {
+    let product = num1 * num2;
+    document.write(`${num1} * ${num2} = ${product}<br/>`);
+}
+
+mult(5, 50);
