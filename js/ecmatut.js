@@ -84,3 +84,36 @@ function doMath(strings, ...values) {
 
 doMath `Add${10} ${20}`;
 doMath `Sub${10} ${20}`;
+
+
+
+/* 6. For of
+ ***************************************************************************************/
+
+// 'for of' (rather than 'for in') allows you to directly write out values of an array or object:
+
+for (let c of fName) {
+    document.write(`${c}<br/>`);
+}
+
+// 'repeat' is a new ECMA6 method to keep in mind — it loops over the same value:
+
+document.write('Hello '.repeat(3) + '<br/>');
+
+// Some other useful methods in ECMA6:
+
+document.write(fName.startsWith('De') + '<br/>');
+document.write(fName.endsWith('ek') + '<br/>');
+document.write(fName.includes('ere') + '<br/>');
+
+let multiline = "This is \
+a multiline \
+string";
+
+document.write(`${multiline}<br/>`);
+
+let multiline2 = `This is
+a multiline
+string`;
+
+document.write(`${multiline2}<br/>`);
