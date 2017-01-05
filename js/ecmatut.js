@@ -117,3 +117,15 @@ a multiline
 string`;
 
 document.write(`${multiline2}<br/>`);
+
+
+
+/* 7. Functions
+ ***************************************************************************************/
+
+function getSum(num1 = 1, num2 = 2) {
+    document.write(`${num1} + ${num2} = ${num1 + num2}`);
+    document.write(`${arguments[0]} + ${arguments[1]}<br/>`); // <= arguments only deals with values passed in (defaults come up as 'undefined')
+}
+
+getSum(3);
