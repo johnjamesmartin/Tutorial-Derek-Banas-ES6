@@ -54,7 +54,7 @@ document.write(typeof undefined + '<br/>');
 
 
 
-/* 4. Strings
+/* 4. Template literals (Strings)
  ***************************************************************************************/
 
 let fName = 'Derek';
@@ -67,4 +67,20 @@ let num1 = 10;
 let num2 = 5;
 
 // we can even write expressions within 'template literals' like so:
-document.write(`10 * 5 = ${num1 * num2}`);
+document.write(`10 * 5 = ${num1 * num2}<br/>`);
+
+
+
+/* 5. Tagged template literals
+ ***************************************************************************************/
+
+function doMath(strings, ...values) {
+    if (strings[0] == 'Add') {
+        document.write(`${values[0]} + ${values[1]} = ${values[0] + values[1]}<br/>`);
+    } else if (strings[0] == 'Sub') {
+        document.write(`${values[0]} - ${values[1]} = ${values[0] - values[1]}<br/>`);
+    }
+}
+
+doMath `Add${10} ${20}`;
+doMath `Sub${10} ${20}`;
