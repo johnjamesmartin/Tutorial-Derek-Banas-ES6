@@ -51,3 +51,20 @@ document.write(typeof Symbol() + '<br/>');
 document.write(typeof { a: 1 } + '<br/>');
 document.write(typeof [1, 2, 3] + '<br/>');
 document.write(typeof undefined + '<br/>');
+
+
+
+/* 4. Strings
+ ***************************************************************************************/
+
+let fName = 'Derek';
+let lName = 'Banas';
+
+// we can embed variable values within strings using 'template literals'
+document.write(`${fName} ${lName}<br/>`);
+
+let num1 = 10;
+let num2 = 5;
+
+// we can even write expressions within 'template literals' like so:
+document.write(`10 * 5 = ${num1 * num2}`);
