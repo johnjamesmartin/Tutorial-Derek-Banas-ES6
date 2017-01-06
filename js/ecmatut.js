@@ -191,3 +191,27 @@ document.write(`Evens: ${evens}<br/>`);
 
 let doubles = valArr.map(v => v * 2);
 document.write(`Doubles: ${doubles}<br/>`);
+
+
+
+/* 13. Objects
+ ***************************************************************************************/
+
+function createAnimal(name, owner) {
+    return {
+        name,
+        owner,
+        getInfo() {
+            return `${this.name} is owned by ${this.owner}`
+        },
+        address: {
+            street: '123 Main St',
+            city: 'Pittsburg'
+        }
+    };
+}
+
+var spot = createAnimal('Spot', 'Doug');
+document.write(`${spot.getInfo()}<br/>`);
+document.write(`${spot.name} is at ${spot.address.street}<br/>`);
+document.write(`${Object.getOwnPropertyNames(spot).join(' ')}<br/>`);
