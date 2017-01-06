@@ -183,3 +183,11 @@ document.write(`Sum: ${sumVals}<br/>`);
 
 let evens = valArr.filter(v => v % 2 === 0);
 document.write(`Evens: ${evens}<br/>`);
+
+
+
+/* 12. Map
+ ***************************************************************************************/
+
+let doubles = valArr.map(v => v * 2);
+document.write(`Doubles: ${doubles}<br/>`);
