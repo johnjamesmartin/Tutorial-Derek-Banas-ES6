@@ -164,3 +164,15 @@ let mult = (num1, num2) => {
 }
 
 mult(5, 50);
+
+
+
+/* 10. Reduce
+ ***************************************************************************************/
+
+let valArr = [1, 2, 3, 4, 5];
+
+// reduce is an accumulator — will keep adding values in array until there are none left:
+let sumVals = valArr.reduce((a, b) => a + b);
+
+document.write(`Sum: ${sumVals}<br/>`);
