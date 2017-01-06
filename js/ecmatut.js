@@ -175,3 +175,11 @@ let valArr = [1, 2, 3, 4, 5];
 // reduce is an accumulator — will keep adding values in array until there are none left:
 let sumVals = valArr.reduce((a, b) => a + b);
 document.write(`Sum: ${sumVals}<br/>`);
+
+
+
+/* 11. Filter
+ ***************************************************************************************/
+
+let evens = valArr.filter(v => v % 2 === 0);
+document.write(`Evens: ${evens}<br/>`);
