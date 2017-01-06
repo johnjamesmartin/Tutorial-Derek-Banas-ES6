@@ -211,7 +211,32 @@ function createAnimal(name, owner) {
     };
 }
 
-var spot = createAnimal('Spot', 'Doug');
+let spot = createAnimal('Spot', 'Doug');
 document.write(`${spot.getInfo()}<br/>`);
 document.write(`${spot.name} is at ${spot.address.street}<br/>`);
 document.write(`${Object.getOwnPropertyNames(spot).join(' ')}<br/>`);
+
+
+
+/* 14. Destructuring
+ ***************************************************************************************/
+
+let { name, owner } = spot;
+document.write(`Name: ${name}<br/>`);
+
+let { address } = spot;
+document.write(`Address: ${address.street}<br/>`);
+
+let favNums = [2.722, .52323, 4.24];
+
+let[,,chaos] = favNums;
+document.write(`Chaos: ${chaos}<br/>`);
+
+let [, ...last2] = favNums;
+document.write(`2nd num: ${last2[0]}<br/>`);
+
+// switch values:
+let val1 = 1, val2 = 2;
+[val1, val2] = [val2, val1];
+
+document.write(`Val2: ${val2[0]}<br/>`);
