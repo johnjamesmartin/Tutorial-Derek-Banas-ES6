@@ -299,3 +299,25 @@ document.write(`It is ${kangaroo.hasPouch} that ${kangaroo.name} has a pouch<br/
 
 document.write(`${chipmunk.getInfo()}<br/>`);
 document.write(`${kangaroo.getInfo()}<br/>`);
+
+
+
+/* 16. Inheritence
+ ***************************************************************************************/
+
+function getClass(classType) {
+    if (classType == 1) {
+        return Mammal;
+    } else {
+        return Marsupial;
+    }
+}
+
+class Koala extends getClass(2) {
+    constructor(name) {
+        super(name);
+    }
+}
+
+let carl = new Koala('Carl');
+document.write(`${carl.getInfo()}<br/>`);
