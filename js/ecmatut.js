@@ -239,4 +239,63 @@ document.write(`2nd num: ${last2[0]}<br/>`);
 let val1 = 1, val2 = 2;
 [val1, val2] = [val2, val1];
 
-document.write(`Val2: ${val2[0]}<br/>`);
+document.write(`Val2: ${val2}<br/>`);
+
+
+
+/* 15. Classes
+ ***************************************************************************************/
+
+class Mammal {
+    constructor(name) {
+        this._name = name;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(name) {
+        this._name = name;
+    }
+
+    static makeMammal(name) {
+        return new Mammal(name);
+    }
+
+    getInfo() {
+        return `${this.name} is a mammal`;
+    }
+}
+
+let monkey = new Mammal('Fred');
+monkey.name = 'Mark';
+document.write(`Mammal: ${monkey.name}<br/>`);
+
+let chipmunk = Mammal.makeMammal('Chipper');
+document.write(`Mammal 2: ${chipmunk.name}<br/>`);
+
+class Marsupial extends Mammal {
+    constructor(name, hasPouch) {
+        super(name);
+        this._hasPouch = hasPouch;
+    }
+
+    get hasPouch() {
+        return this._hasPouch;
+    }
+
+    set hasPouch(hasPouch) {
+        this._hasPouch = hasPouch;
+    }
+
+    getInfo() {
+        return `${this.name} is a marsupial`
+    }
+}
+
+let kangaroo = new Marsupial('Paul', true);
+document.write(`It is ${kangaroo.hasPouch} that ${kangaroo.name} has a pouch<br/>`);
+
+document.write(`${chipmunk.getInfo()}<br/>`);
+document.write(`${kangaroo.getInfo()}<br/>`);
