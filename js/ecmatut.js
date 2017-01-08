@@ -360,3 +360,20 @@ let array3 = Array.from(array1, (value) => value * 2);
 for (let val of array1) document.write(`Array value: ${val}<br/>`);
 for (let val of array2) document.write(`Array value: ${val}<br/>`);
 for (let val of array3) document.write(`Array value: ${val}<br/>`);
+
+
+
+/* 19. Sets
+ ***************************************************************************************/
+
+// sets are like arrays but without duplicate elements
+var randSet = new Set();
+randSet.add(10);
+randSet.add('Word');
+
+document.write(`Has 10: ${randSet.has(10)}<br/>`);
+document.write(`Set size: ${randSet.size}<br/>`);
+
+randSet.delete(10);
+
+for (let val of randSet) document.write(`Set value: ${val}<br/>`);
