@@ -393,3 +393,42 @@ document.write(`Map size: ${randMap.size}<br/>`);
 randMap.forEach(function(val, key) {
     document.write(`${key}: ${val}<br/>`);
 });
+
+
+/* 21. Promises
+ ***************************************************************************************/
+
+// resolve immediately:
+var p1 = Promise.resolve('Resolve me!');
+p1.then((res) => document.write(`${res}<br>`));
+
+
+// resolve after 2 seconds:
+var p2 = new Promise(function(resolve, reject) {
+    setTimeout(() => resolve('Resolve me 2'), 2000);
+});
+p2.then((res) => document.body.innerHTML+=`${res}<br>`);
+
+
+let randVal = 18;
+
+var p3 = new Promise(function(resolve, reject) {
+    if (randVal == 6) {
+        resolve('Good value');
+    } else {
+        resolve('Bad value');
+    }
+});
+
+p3.then((val) => document.write(`${val}<br>`), (err) => document.write(`${err}<br>`));
+
+
+var p4 = new Promise(function(resolve, reject) {
+    if (randVal <= 17) {
+        throw new Error('Can\'t vote');
+    } else {
+        resolve('Can vote');
+    }
+});
+
+p4.then((val) => document.write(`${val}<br>`), (err) => document.write(`${err}<br>`));
