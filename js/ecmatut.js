@@ -377,3 +377,19 @@ document.write(`Set size: ${randSet.size}<br/>`);
 randSet.delete(10);
 
 for (let val of randSet) document.write(`Set value: ${val}<br/>`);
+
+
+
+/* 20. Maps
+ ***************************************************************************************/
+
+var randMap = new Map();
+randMap.set('key1', 'Random string');
+randMap.set('key2', 10);
+
+document.write(`key1: ${randMap.get('key1')}<br/>`);
+document.write(`Map size: ${randMap.size}<br/>`);
+
+randMap.forEach(function(val, key) {
+    document.write(`${key}: ${val}<br/>`);
+});
